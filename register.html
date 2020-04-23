@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>slowmotion  注册</title>
+<script language="javascript">
+ function mySubmit(actionName) {
+ 	var obj = document.getElementsByName("register");
+  	var flags = false;  
+    for(var i=0; i<obj.length; i ++){
+    if(obj[i].checked==true){
+        flags = true;
+		}
+      }
+     if (flags == false)  
+       {  
+            alert("对不起，请先同意服务条款和隐私权相关政策");
+       } 
+	  else
+	  {
+		  window.location.href='jump.html';
+		}    
+ }
+</script>
+<style type="text/css">
+#box {
+	width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#box #center {
+	width: 1200px;
+	height: 700px;
+	background-color: #f5f5f5;
+}
+#box #center #sign select {
+	height: 30px;
+}
+#box #welcome {
+	height: 50px;
+	width: 1200px;
+	background-color: #6E9BB0;
+	line-height: 50px;
+	color: #FFF;
+}
+#box #center #sign p {
+	font-size: 10px;
+	color: #666;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #999;
+	margin-top: 5px;
+}
+#box #center #sign {
+	width: 500px;
+	height: 700px;
+	float: right;
+}
+#box #center #sign #choice {
+	height: 15px;
+	width: 15px;
+}
+#box #center #sign_img {
+	width: 500px;
+	height: 700px;
+}
+#box #center #sign input {
+	height: 30px;
+	width: 300px;
+	margin-top: 20px;
+}
+#box #center textarea {
+	height: 200px;
+	width: 378px;
+}
+#bottom  {
+	height: 80px;
+	width: 100%;
+	background-color: #333;
+	color: #999;
+	text-align: center;
+	font-size: 14px;
+}
+#logo  {
+	width: 100%;
+}
+* {
+	margin: 0px;
+	padding: 0px;
+}
+#box #up {
+	height: 50px;
+	width: 1200px;
+	color: #666;
+}
+#box #up #navi ul li {
+	height: 50px;
+	width: 100px;
+	list-style-type: none;
+	line-height: 50px;
+	float: left;
+	text-align: center;
+	font-size: 14px;
+}
+hr {
+	color: #333;
+	height: 2px;
+	width: 100%;
+}
+#box #up #denlu {
+	float: right;
+	height: 50px;
+	width: 100px;
+	font-size: 12px;
+	line-height: 50px;
+}
+#box #center #sign #button input {
+	width: 300px;
+	height: 30px;
+	margin-top: 0px;
+}
+#box #center #sign #button {
+	width: 300px;
+	height: 60px;
+}
+#box #up a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+#box #up a {
+	color: #666;
+	text-decoration: none;
+}
+</style>
+</head>
+
+<body><div id="logo"><img src="images/logo.jpg" width="245" height="75" /></div><hr/>
+<div id="box">
+<div id="up">
+  <div id="navi">
+    <ul>
+      <li><a href="index.html">首页</a></li>
+      <li><a href="movie.html">电影</a></li>
+      <li><a href="https://movie.douban.com" target="_blank">豆瓣</a></li>
+      <li><a href="contact.html">联系</a></li>
+    </ul>
+  </div>
+<div id="denlu"><a href="sign in.html">登录</a>/<a href="register.html">注册</a></div>
+</div>
+<div id="welcome">&nbsp;&nbsp;&nbsp;&nbsp;欢迎注册slowmotion电影网，此账号仅适用于本网站。</div>
+  <div id="center">
+    <div id="sign"><form action="" method="get">输账户名:<input type="text" maxlength="18" /><p>6~18个字符，可使用字母、数字、下划线，需以字母开头</p>
+输入密码:<input type="text" maxlength="16" /><p>6~16个字符，区分大小写</p>
+用户姓名:<input name="" type="text" /><br />
+邮件地址:<input name="" type="text" />@<select>
+  <option value ="qq">qq.com</option>
+  <option value ="163">163.com</option>
+  <option value="123">123.com</option>
+  <option value="slow">slow.com</option>
+</select><br />
+手机号码:<input type="text" maxlength="11" /><p>仅支持中国大陆11位手机号码</p><br />
+<h4>个性签名:</h4><textarea name="" cols="" rows=""></textarea><br />
+
+<input name="register" type="radio"  id="choice" value=""/>同意"服务条款"和"隐私权相关政策"<br />
+<div id="button"><input name="" type="button" value="注册" onclick="mySubmit()"/><input name="" type="reset" value="清空" /></div></form>
+</div> 
+    <div id="sign_img"><img src="images/sign_in.jpg" width="500" height="700" /></div>
+  </div>
+ 
+</div><div id="bottom">©caiyueyi&nbsp;2019-2020&nbsp;版权所有</div>
+</body>
+</html>

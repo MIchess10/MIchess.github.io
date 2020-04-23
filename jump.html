@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>slowmotion  注册成功</title>
+<style type="text/css">
+#box {
+	text-align: center;
+	width: 100%;
+}
+</style>
+
+<script language="javascript">{
+	var t=5;
+    function mytime(){
+		document.getElementById("begin").innerHTML='<span>-'+t+'-</span>';
+		t--;
+		if(t==-1)
+			window.location.href="index.html";
+		setTimeout(mytime,1000);
+	}
+}
+</script>
+</head>
+<body onload="mytime()">
+<div id="box"><span id="begin">-5-</span>秒后跳转至首页<p>若未跳转点击这里前往<a href="index.html">首页</a></p>
+或者<a href="javascript:history.back(-1)">返回上一页</a></div>
+</body>
+</html>
