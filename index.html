@@ -1,1 +1,265 @@
-爱你哟
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>slowmotion  电影查找</title>
+<style type="text/css">
+#box {
+	width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#box #neirong #bangdan {
+	float: right;
+	height: 500px;
+	width: 300px;
+	margin-top: -630px;
+}
+#box #neirong #bangdan ol li {
+	border-bottom-width: 2px;
+	border-bottom-style: dotted;
+	border-bottom-color: #999;
+	list-style-type: none;
+	height: 40px;
+	line-height: 40px;
+	font-size: 12px;
+}
+#box #center {
+	height: 500px;
+	width: 1200px;
+}
+#box #xuanze #arrow_right img {
+	margin-top: -40px;
+}
+#box #neirong {
+	width: 1200px;
+}
+#box #xuanze {
+	height: 40px;
+	width: 1200px;
+	position: relative;
+	top: -270px;
+}
+#bottom  {
+	height: 80px;
+	width: 100%;
+	background-color: #333;
+	color: #999;
+	text-align: center;
+	font-size: 14px;
+}
+#logo  {
+	width: 100%;
+}
+#box #neirong table {
+	font-size: 12px;
+}
+* {
+	margin: 0px;
+	padding: 0px;
+}
+#box #up {
+	height: 50px;
+	width: 1200px;
+	color: #666;
+}
+#box #up #navi ul li {
+	height: 50px;
+	width: 100px;
+	list-style-type: none;
+	line-height: 50px;
+	float: left;
+	text-align: center;
+	font-size: 14px;
+}
+#box #neirong table tr th {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC;
+}
+hr {
+	color: #333;
+	height: 2px;
+	width: 100%;
+}
+#box #up #denlu {
+	float: right;
+	height: 50px;
+	width: 100px;
+	font-size: 12px;
+	line-height: 50px;
+}
+#box #neirong table tr p {
+	margin-left: 50px;
+	font-size: 10px;
+}
+#box #neirong #table {
+	height: 630px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 738px;
+}
+#box #center #xuanze #arrow_left {
+	height: 40px;
+	width: 40px;
+}
+.mouse_hand {
+	cursor:pointer;
+}
+#box #center #xuanze #arrow_right {
+	float: right;
+	width: 40px;
+}
+#box a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+#box a {
+	color: #666;
+	text-decoration: none;
+}
+</style>
+<script language="javascript">
+var now=0;
+var t,flag1,flag2;
+function myshow(n)
+{
+	flag1=0;
+	if(Number(n))
+	{
+		//clearTimeout(t);
+		now=n;
+		}
+	jude(now);
+	if(now==5)
+		now=0;
+	now++;
+	document.getElementById("adv").src="images/center_img"+now+".jpg"
+	if(now==5)
+		now=0;
+	t=setTimeout("myshow()",2000);
+	}
+function left()
+{
+	now--;
+	jude(now);
+	if(flag1==1)
+		now=5;
+	document.getElementById("adv").src="images/center_img"+now+".jpg"
+	clearTimeout(t);
+	}
+function right()
+{
+	now++;
+	jude(now);
+	if(flag2==1)
+		now=1;
+	document.getElementById("adv").src="images/center_img"+now+".jpg"
+	clearTimeout(t);
+	}
+function countine()
+{
+	t=setTimeout("myshow()",2000);
+	}
+function jude(n)
+{
+	if(n==6)
+		flag2=1;
+	else
+		flag2=0;
+	if(n==0)
+		flag1=1;
+	else
+		flag1=0;
+	}
+</script>
+</head>
+
+<body onload="myshow()"><div id="logo"><img src="images/logo.jpg" width="245" height="75" /></div><hr/>
+<div id="box">
+
+<div id="up">
+  <div id="navi">
+    <ul>
+      <li><a href="index.html">首页</a></li>
+      <li><a href="movie.html">电影</a></li>
+      <li><a href="https://movie.douban.com/" target="_blank">豆瓣</a></li>
+      <li><a href="contact.html">联系</a></li>
+    </ul>
+  </div>
+<div id="denlu"><a href="sign in.html">登录</a>/<a href="register.html">注册</a></div>
+</div>
+  <div id="center"><img src="" id="adv" width="1200" height="500" /><div id="xuanze">
+    <div id="arrow_left "><img src="images/arrow_left.png" width="40" height="41" class="mouse_hand" onclick="left()" onmouseout="countine()" /></div>
+  <div id="arrow_right"><img src="images/arrow_right.png" width="40" height="40" class="mouse_hand" onclick="right()" onmouseout="countine()"/></div></div>
+  </div>
+  
+  <div id="neirong"><div id="table"><table width="738">
+  <tr >
+    <th height="40" colspan="4" align="left" scope="col">正在热映:</th>
+    <th width="94" align="right" scope="col"><a href="movie.html">更多>></a></th>
+  </tr>
+  <tr>
+    <td width="155" height="180"><a href="movie_html/阿拉丁.html"><img src="images/img_00.jpg" width="100" height="148" /></a><br />
+      阿拉丁</td>
+    <td width="155"><img src="images/img_01.jpg" width="100" height="148" /><br />
+一条狗的使命</td>
+    <td width="155"><img src="images/img_02.jpg" width="100" height="148" /><br />
+大侦探皮卡丘...</td>
+    <td width="155"><img src="images/img_03.jpg" width="100" height="148" /><br />
+复仇者联盟4...</td>
+    <td><img src="images/img_04.jpg" width="100" height="148" /><br />
+一个母亲的复仇</td>
+  </tr>
+</table><br/>
+    <table width="738">
+      <tr>
+        <th height="40" colspan="4" align="left" scope="col">最近热门电影:</th>
+        <th width="94" align="right" scope="col"><a href="movie.html">更多>></a></th>
+      </tr>
+      <tr>
+        <td width="155" height="180"><a href="movie_html/流浪地球.html"><img src="images/img_05.jpg" width="100" height="139" /></a><br />
+流浪地球</td>
+        <td width="155"><a href="movie_html/绿皮书.html"><img src="images/img_06.jpg" width="100" height="139" /></a><br />
+绿皮书</td>
+        <td width="155"><img src="images/img_07.jpg" width="100" height="139" /><br />
+老师好</td>
+        <td width="155"><img src="images/img_08.jpg" width="100" height="139" /><br />
+调音师</td>
+        <td><img src="images/img_09.jpg" width="100" height="139" /><br />
+风中有朵雨做的云</td>
+      </tr>
+      <tr>
+        <td><img src="images/img_10.jpg" width="100" height="139" /><br />
+教授</td>
+        <td><a href="movie_html/何以为家.html"><img src="images/img_11.jpg" width="100" height="139" /></a><br />
+何以为家</td>
+        <td><img src="images/img_12.jpg" width="100" height="139" /><br />
+一出好戏</td>
+        <td><a href="movie_html/毒液.html"><img src="images/img_13.jpg" width="100" height="139" /></a><br />
+毒液</td>
+        <td><img src="images/img_14.jpg" width="100" height="139" /><br />
+疯狂的外星人</td>
+      </tr>
+    </table></div>
+    <div id="bangdan">
+        <h3>北美票房榜榜单</h3>
+      </blockquote>
+      <ol>
+        <li>1、<a href="movie_html/阿拉丁.html">阿拉丁</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8610万美元</li>
+        <li>2、疾速备战&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2435万美元</li>
+        <li>3、复仇者联盟4：终局之战&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1684万美元</li>
+        <li>4、大侦探皮卡丘&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1330万美元</li>
+        <li>5、魔童&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;754万美元</li>
+        <li>6、高材生&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;651万美元</li>
+        <li>7、一条狗的使命2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;409万美元</li>
+        <li>8、偷心女盗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;381万美元</li>
+        <li>9、侵入者&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;226万美元</li>
+        <li>10、全民追女王&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;156万美元</li>
+      </ol>
+    </div>
+</div>
+  
+</div><div id="bottom">©caiyueyi&nbsp;2019-2020&nbsp;版权所有</div>
+</body>
+</html>
